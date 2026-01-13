@@ -1,0 +1,13 @@
+{
+  "name": "onedrive",
+  "actions": [
+    { "name": "file_added", "description": "Un fichier est ajouté dans un dossier" },
+    { "name": "file_deleted", "description": "Un fichier est supprimé" },
+    { "name": "file_too_large", "description": "Un fichier dépasse une certaine taille" }
+  ],
+  "reactions": [
+    { "name": "send_notification", "description": "Envoyer une notification ou un email" },
+    { "name": "copy_file", "description": "Copier le fichier dans un autre dossier OneDrive" },
+    { "name": "rename_file", "description": "Renommer automatiquement le fichier" }
+  ]
+}

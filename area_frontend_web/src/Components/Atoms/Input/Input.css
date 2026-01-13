@@ -1,0 +1,42 @@
+.wcp-input {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #1e293b;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.wcp-input::placeholder {
+  color: #94a3b8;
+}
+
+.wcp-input:hover {
+  border-color: #cbd5e1;
+  background-color: #ffffff;
+}
+
+.wcp-input:focus {
+  background-color: #ffffff;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.wcp-input--error {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+  color: #ef4444;
+}
+
+.wcp-input--error:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+}
+
+.wcp-input--error::placeholder {
+  color: #fca5a5;
+}

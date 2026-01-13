@@ -1,0 +1,108 @@
+.service-page {
+    padding: 2rem;
+    min-height: 100vh;
+    background: #0B0B0D; /* même teinte que le Dashboard, fond sombre uniforme */
+    font-family: 'Inter', sans-serif;
+    color: #E6E6E6; /* texte clair pour visibilité */
+}
+
+/* header / titres : couleurs adaptées au fond sombre */
+.service-page__header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.service-page__title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #E6E6E6; /* texte clair */
+    margin-bottom: 1rem;
+    background: none; /* supprime le gradient texte clair d'origine */
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: initial;
+    letter-spacing: -1px;
+}
+
+.service-page__subtitle {
+    font-size: 1.1rem;
+    color: #B5B5BD; /* texte secondaire clair */
+}
+
+/* loading / error : couleurs lisibles sur fond sombre */
+.service-page__loading,
+.service-page__error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    font-size: 1.2rem;
+    color: #E6E6E6;
+}
+
+.service-page__error {
+    color: #F87171; /* rouge doux visible sur dark */
+}
+
+/* la grille des cards reste inchangée (conserver styles des cards) */
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Si l'état vide utilisait un grand panneau blanc : passer à une surface sombre */
+.service-page__empty {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background: #1A1A1F; /* surface sombre pour "card" vide */
+    backdrop-filter: none;
+    border-radius: 12px; /* conserver arrondi modéré si voulu */
+    border: 1px solid rgba(255,255,255,0.03); /* subtil */
+    text-align: center;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+}
+
+.service-page__empty-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    animation: pulse 2s infinite;
+}
+
+.service-page__empty h3 {
+    font-size: 1.5rem;
+    color: #E6E6E6;
+    margin-bottom: 0.5rem;
+}
+
+.service-page__empty p {
+    color: #B5B5BD;
+    max-width: 400px;
+}
+
+/* responsive adjustments (conserver) */
+@media (max-width: 768px) {
+    .service-page {
+        padding: 1rem;
+    }
+
+    .service-page__title {
+        font-size: 2.2rem;
+    }
+
+    .service-list {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .service-page__empty {
+        padding: 2rem 1rem;
+    }
+}
